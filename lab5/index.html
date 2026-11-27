@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 5</title>
+    <script src="dist/main.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 16px; background: #f1f5f9; }
+        h1 { font-size: 22px; margin: 4px 0 12px; }
+        h2 { font-size: 16px; margin: 0 0 8px; }
+        section { background: #fff; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; }
+        input, select, button { font-size: 14px; padding: 6px 10px; }
+        button { background: #2563eb; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+        table { border-collapse: collapse; margin-top: 8px; }
+        td, th { border: 1px solid #cbd5e1; padding: 4px 10px; font-size: 14px; }
+        ul { margin: 8px 0 0; }
+        .out { margin: 8px 0 0; font-weight: bold; min-height: 18px; }
+    </style>
+</head>
+<body>
+    <h1>Лабораторна робота №5. TypeScript</h1>
+
+    <section>
+        <h2>Множення (п. 7)</h2>
+        <input type="text" id="x" placeholder="x">
+        <input type="text" id="y" placeholder="y">
+        <button id="calculate">Обчислити</button>
+        <p id="product" class="out"></p>
+    </section>
+
+    <section>
+        <h2>Перевірка номера телефону (пп. 9-10)</h2>
+        <input type="text" id="phone" placeholder="+38(XXX)XX-XX-XXX">
+        <button id="check-phone">Check</button>
+        <p id="phone-result" class="out"></p>
+    </section>
+
+    <section>
+        <h2>Студенти з середнім балом не нижче 4 (п. 11)</h2>
+        <ul id="students"></ul>
+    </section>
+
+    <section>
+        <h2>Курс валют НБУ (пп. 13-16)</h2>
+        <select id="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="PLN">PLN</option>
+        </select>
+        <input type="number" id="amount" placeholder="Сума, грн" min="0">
+        <button id="show-rate">Показати курс валют</button>
+        <p id="status" class="out"></p>
+        <table id="rate-table" hidden>
+            <thead><tr><th>Код</th><th>Назва</th><th>Курс</th><th>Дата</th></tr></thead>
+            <tbody id="rate-body"></tbody>
+        </table>
+        <p id="converted" class="out"></p>
+    </section>
+</body>
+</html>
