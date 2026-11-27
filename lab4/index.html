@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Лабораторна робота №4</h1>
+
+    <section>
+        <h2>1. Дата 8 жовтня 2014, 12:09</h2>
+        <button id="show-date">Показати дату</button>
+        <p id="out-date" class="out"></p>
+    </section>
+
+    <section>
+        <h2>2. День тижня</h2>
+        <input type="date" id="week-input" value="2024-01-03">
+        <button id="show-week">getWeekDay</button>
+        <p id="out-week" class="out"></p>
+    </section>
+
+    <section>
+        <h2>3. Останній день місяця</h2>
+        <input type="number" id="year" value="2024">
+        <input type="number" id="month" value="2" min="1" max="12">
+        <button id="show-last">getLastDayOfMonth</button>
+        <p id="out-last" class="out"></p>
+    </section>
+
+    <section>
+        <h2>4. Перевірка номера телефону</h2>
+        <input type="text" id="phone" placeholder="+38(XXX)XX-XX-XXX">
+        <button id="check">Check</button>
+        <p id="out-phone" class="out"></p>
+    </section>
+
+    <section>
+        <h2>5. Прізвище та ім’я навпаки</h2>
+        <input type="text" id="name" placeholder="Прізвище Ім’я">
+        <button id="swap">Поміняти місцями</button>
+        <p id="out-name" class="out"></p>
+    </section>
+
+    <section>
+        <h2>6. Заміна слів на *</h2>
+        <textarea id="text" rows="3" placeholder="Введіть текст"></textarea>
+        <button id="censor">Перевірити текст</button>
+        <p id="out-text" class="out"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
