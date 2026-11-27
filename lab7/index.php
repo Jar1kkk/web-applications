@@ -2,7 +2,6 @@
 require __DIR__ . '/functions.php';
 require __DIR__ . '/shapes.php';
 
-// Виконує приклад із завдання та повертає все, що він надрукував
 function capture(callable $example): string
 {
     ob_start();
