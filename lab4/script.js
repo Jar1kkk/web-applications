@@ -20,7 +20,6 @@ function swapName(fullName) {
 }
 
 function censor(text) {
-    // (?<!\p{L}) і (?!\p{L}) - щоб замінялись лише цілі слова, а не частини
     const pattern = new RegExp('(?<!\\p{L})(' + words.join('|') + ')(?!\\p{L})', 'giu');
     return text.replace(pattern, '*');
 }
