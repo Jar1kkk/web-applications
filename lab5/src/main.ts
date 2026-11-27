@@ -11,10 +11,6 @@ function multiply(x: number, y: number): number {
     return x * y;
 }
 
-// Виклик multiply("2", 3) дає помилку компілятора:
-// error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-// Пояснення: перший параметр має тип number, а передано рядок. TypeScript не перетворює
-// типи сам, тому рядок треба явно перетворити на число.
 multiply(Number("2"), 3);
 
 const xInput = getElement<HTMLInputElement>("#x");
@@ -69,12 +65,6 @@ interface Student {
     email?: string;
 }
 
-// Повідомлення компілятора для студента без fullName:
-// error TS2741: Property 'fullName' is missing in type '{ id: number; group: string; averageMark: number; }'
-// but required in type 'Student'.
-// Повідомлення для averageMark: "4.5":
-// error TS2322: Type 'string' is not assignable to type 'number'.
-// Об'єкти виправлено: додано fullName, а середній бал записано числом.
 const students: Student[] = [
     { id: 1, fullName: "Андрієнко Олег", group: "9ПМ-4", averageMark: 4.6 },
     { id: 2, fullName: "Бондар Ірина", group: "9ПМ-4", averageMark: 3.8, email: "bondar@example.com" },
@@ -136,7 +126,6 @@ const rateBody = getElement<HTMLTableSectionElement>("#rate-body");
 const convertedOutput = getElement<HTMLParagraphElement>("#converted");
 
 getElement<HTMLButtonElement>("#show-rate").addEventListener("click", async () => {
-    // варіанти списку задані нами, тому приведення типу допустиме
     const currency = currencySelect.value as Currency;
     statusOutput.textContent = "Завантаження...";
     rateTable.hidden = true;
