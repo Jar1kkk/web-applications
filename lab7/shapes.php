@@ -7,7 +7,6 @@ interface Shape
     public function calculatePerimeter(): float;
 }
 
-// Перевірка, спільна для всіх фігур
 function requirePositive(float $value, string $name): float
 {
     if ($value <= 0) {
@@ -76,7 +75,6 @@ class Square extends Rectangle
         parent::setHeight($this->side);
     }
 
-    // щоб квадрат завжди залишався квадратом
     public function setWidth(float $width): void
     {
         $this->setSide($width);
